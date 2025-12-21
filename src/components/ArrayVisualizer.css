@@ -1,0 +1,114 @@
+.visualizer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.array-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    min-height: 100px;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    overflow-x: auto;
+}
+
+.array-element {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-secondary);
+    border: 2px solid var(--accent-cyan);
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.array-element.highlight-green {
+    background: rgba(34, 197, 94, 0.2);
+    border-color: #22c55e;
+    transform: scale(1.1);
+}
+
+.array-element.highlight-red {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: #ef4444;
+}
+
+.index-label {
+    position: absolute;
+    bottom: -25px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.controls-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--glass-bg);
+    border-radius: 12px;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 200px;
+    flex: 1;
+}
+
+.control-group h4 {
+    color: var(--accent-purple);
+    margin-bottom: 0.5rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+input {
+    background: var(--bg-primary);
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    padding: 0.5rem;
+    border-radius: 6px;
+    flex: 1;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent-cyan);
+}
+
+button {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--accent-cyan);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+button:hover {
+    background: var(--accent-cyan);
+    color: var(--bg-primary);
+}
+
+.message-area {
+    padding: 1rem;
+    background: rgba(192, 132, 252, 0.1);
+    border-left: 4px solid var(--accent-purple);
+    border-radius: 4px;
+    min-height: 24px;
+}
